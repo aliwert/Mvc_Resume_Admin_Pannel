@@ -21,5 +21,10 @@ namespace MvcResume.Controllers
             var deneyimler = db.TblDeneyimlerims.ToList();
             return PartialView(deneyimler);
         }
+        public PartialViewResult Egitim()
+        {
+            var egitimler = db.TblEgitims.ToList();
+            return PartialView(egitimler);
+        }
     }
 }
