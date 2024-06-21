@@ -16,5 +16,10 @@ namespace MvcResume.Controllers
             var degerler = db.TblAbouts.ToList();
             return View(degerler);
         }
+        public PartialViewResult Deneyim()
+        {
+            var deneyimler = db.TblDeneyimlerims.ToList();
+            return PartialView(deneyimler);
+        }
     }
 }
