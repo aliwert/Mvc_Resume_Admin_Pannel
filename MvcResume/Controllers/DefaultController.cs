@@ -26,5 +26,15 @@ namespace MvcResume.Controllers
             var egitimler = db.TblEgitims.ToList();
             return PartialView(egitimler);
         }
+        public PartialViewResult Yetenek()
+        {
+            var yetenekler = db.TblYeteneklerims.ToList();
+            return PartialView(yetenekler);
+        }
+        public PartialViewResult Hobiler()
+        {
+            var hobiler = db.TblHobilerims.ToList();
+            return PartialView(hobiler);
+        }
     }
 }
