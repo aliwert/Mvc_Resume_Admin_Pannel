@@ -257,6 +257,7 @@
     <Content Include="Views\Default\Yetenek.cshtml" />
     <Content Include="Views\Default\Hobiler.cshtml" />
     <Content Include="Views\Default\Certificates.cshtml" />
+    <Content Include="Views\Default\iletisim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

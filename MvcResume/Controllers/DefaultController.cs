@@ -41,5 +41,9 @@ namespace MvcResume.Controllers
             var sertifikalar = db.TblSertifikalarims.ToList();
             return PartialView(sertifikalar);
         }
+        public PartialViewResult iletisim()
+        {
+            return PartialView();
+        }
     }
 }

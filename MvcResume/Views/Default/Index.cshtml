@@ -37,7 +37,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certificates</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Contact</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
 
             </ul>
         </div>
@@ -45,32 +45,32 @@
     <!-- Page Content-->
     <div class="container-fluid p-0">
         <!-- About-->
-        @foreach(var x in Model)
+        @foreach (var x in Model)
         {
 
 
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    @x.Name
-                    <span class="text-primary">@x.Surname</span>
-                </h1>
-                <div class="subheading mb-5">
-                    @x.Adress · @x.Phone ·
-                    <a href="mailto:name@email.com">@x.Mail</a>
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        @x.Name
+                        <span class="text-primary">@x.Surname</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        @x.Adress · @x.Phone ·
+                        <a href="mailto:name@email.com">@x.Mail</a>
+                    </div>
+                    <p class="lead mb-5">@x.Description</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    </div>
                 </div>
-                <p class="lead mb-5">@x.Description</p>
-                <div class="social-icons">
-                    <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </section>
+            </section>
         }
         <hr class="m-0" />
-        
+
         <!-- Experience-->
         <section class="resume-section" id="experience">
             @Html.Action("Deneyim")
@@ -88,12 +88,16 @@
         <hr class="m-0" />
         <!-- Interests-->
         <section class="resume-section" id="interests">
-           @Html.Action("Hobiler")
+            @Html.Action("Hobiler")
         </section>
         <hr class="m-0" />
         <!-- Awards-->
         <section class="resume-section" id="awards">
             @Html.Action("Certificates")
+        </section>
+        <!-- contacts -->
+        <section class="resume-section" id="contact">
+            @Html.Action("iletisim")
         </section>
     </div>
     <!-- Bootstrap core JS-->
