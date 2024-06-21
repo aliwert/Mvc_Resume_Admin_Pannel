@@ -36,5 +36,10 @@ namespace MvcResume.Controllers
             var hobiler = db.TblHobilerims.ToList();
             return PartialView(hobiler);
         }
+        public PartialViewResult Certificates()
+        {
+            var sertifikalar = db.TblSertifikalarims.ToList();
+            return PartialView(sertifikalar);
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿@using MvcResume.Models.Entity
+@model List<TblSertifikalarim>
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Awards & Certifications</h2>
+    <ul class="fa-ul mb-0">
+        @foreach (var x in Model)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                @x.Aciklama
+            </li>
+        }
+
+    </ul>
+</div>
+
