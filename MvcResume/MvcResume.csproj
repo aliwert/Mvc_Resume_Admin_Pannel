@@ -2364,6 +2364,7 @@
     <Content Include="Views\Hakkimda\Index.cshtml" />
     <Content Include="Views\Deneyim\Index.cshtml" />
     <Content Include="Views\Deneyim\AddExperience.cshtml" />
+    <Content Include="Views\Deneyim\GetExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

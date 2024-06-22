@@ -34,5 +34,11 @@ namespace MvcResume.Controllers
             dp.Tdelete(t);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult GetExperience(int id)
+        {
+            TblDeneyimlerim t = dp.Find(x => x.ID == id);
+            return View(t);
+        }
     }
 }
