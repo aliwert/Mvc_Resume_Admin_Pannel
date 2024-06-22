@@ -40,5 +40,16 @@ namespace MvcResume.Controllers
             TblDeneyimlerim t = dp.Find(x => x.ID == id);
             return View(t);
         }
+        [HttpPost]
+        public ActionResult GetExperience(TblDeneyimlerim p)
+        {
+            TblDeneyimlerim t = dp.Find(x => x.ID == p.ID);
+            t.Baslik = p.Baslik;
+            t.AltBaslik = p.AltBaslik;
+            t.Tarih = p.Tarih;
+            t.Aciklama = p.Aciklama;
+            dp.TUpdate(t);
+            return RedirectToAction("Index");
+        }
     }
 }
