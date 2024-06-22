@@ -1,4 +1,5 @@
-﻿using MvcResume.Repositories;
+﻿using MvcResume.Models.Entity;
+using MvcResume.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,17 @@ namespace MvcResume.Controllers
         {
             var deneyimler = dp.List();
             return View(deneyimler);
+        }
+        [HttpGet]
+        public ActionResult AddExperience()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddExperience(TblDeneyimlerim p)
+        {
+            dp.TAdd(p);
+            return RedirectToAction("Index");
         }
     }
 }

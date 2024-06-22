@@ -2363,6 +2363,7 @@
     <Content Include="Views\Default\iletisim.cshtml" />
     <Content Include="Views\Hakkimda\Index.cshtml" />
     <Content Include="Views\Deneyim\Index.cshtml" />
+    <Content Include="Views\Deneyim\AddExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
