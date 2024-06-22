@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MvcResume.Repositories
 {
-    public class DeneyimRepository : GenericRepository<TblDeneyimlerim>
+    public class EgitimRepository : GenericRepository<TblEgitim>
     {
 
     }
