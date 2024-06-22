@@ -1,4 +1,4 @@
-﻿
+﻿@model MvcResume.Models.Entity.TblDeneyimlerim
 @{
     ViewBag.Title = "AddExperience";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -8,17 +8,21 @@
 <br />
 <form>
 
-    <input type="text" name="ID" class="form-control" placeholder="Id" />
+    @Html.Label("Experience ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
     <br />
-    <input type="text" name="AltBaslik" class="form-control" placeholder="Subtitle" />
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
     <br />
-
-    <input type="text" name="Tarih" class="form-control" placeholder="Working Date" />
+    @Html.Label("Subtitle")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
     <br />
-
-    <textarea name="Aciklama" placeholder="Enter Description" class="form-control" rows="4"></textarea>
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
     <br />
-
+    @Html.Label("Description")
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
     <button class="btn btn-success">Update</button>
 
 </form>
