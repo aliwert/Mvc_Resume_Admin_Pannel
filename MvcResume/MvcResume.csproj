@@ -133,6 +133,7 @@
     <Compile Include="Controllers\DeneyimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\YetenekController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2365,6 +2366,7 @@
     <Content Include="Views\Deneyim\Index.cshtml" />
     <Content Include="Views\Deneyim\AddExperience.cshtml" />
     <Content Include="Views\Deneyim\GetExperience.cshtml" />
+    <Content Include="Views\Yetenek\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
