@@ -2367,6 +2367,7 @@
     <Content Include="Views\Deneyim\AddExperience.cshtml" />
     <Content Include="Views\Deneyim\GetExperience.cshtml" />
     <Content Include="Views\Yetenek\Index.cshtml" />
+    <Content Include="Views\Yetenek\YeniYetenek.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
