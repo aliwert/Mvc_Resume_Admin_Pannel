@@ -28,9 +28,9 @@
                                     <thead>
                                         <tr>
                                             <th style="width: 10px">#</th>
-                                            <th>Task</th>
-                                            <th>Progress</th>
-                                            <th style="width: 40px">Label</th>
+                                            <th>Ability</th>
+                                            <th>Degree</th>
+                                            <th style="width: 40px">Ratio</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -38,12 +38,13 @@
                                         <tr>
                                             <td>@x.ID</td>
                                             <td>@x.Yetenek</td>
+
                                             <td>
                                                 <div class="progress progress-xs">
-                                                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                                                    <div class="progress-bar progress-bar-danger" style="width: @x.Oran%"></div>
                                                 </div>
                                             </td>
-                                            <td><span class="badge bg-danger">55%</span></td>
+                                            <td><span class="badge bg-success">@x.Oran%</span></td>
                                         </tr>
                                         }
                                     </tbody>
