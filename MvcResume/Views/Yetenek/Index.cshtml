@@ -27,6 +27,9 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
+                                <a href="#" class="btn btn-info">Add New Ability</a>
+                                <br />
+                                <br />
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -34,14 +37,18 @@
                                             <th>Ability</th>
                                             <th>Degree</th>
                                             <th style="width: 40px">Ratio</th>
+                                            <th>Operations</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach(var x in Model) {
-                                            if(x.Oran <= 50 && x.Oran>= 0) {
+                                        @foreach (var x in Model)
+                                        {
+                                            if (x.Oran <= 50 && x.Oran >= 0)
+                                            {
                                                 renk = "progress-bar progress-bar-danger";
                                             }
-                                            if(x.Oran >= 51 && x.Oran <= 70)
+                                            if (x.Oran >= 51 && x.Oran <= 70)
                                             {
                                                 renk = "progress-bar bg-warning";
                                             }
@@ -54,17 +61,22 @@
                                                 renk = "progress-bar bg-success";
                                             }
 
-                                        <tr>
-                                            <td>@x.ID</td>
-                                            <td>@x.Yetenek</td>
+                                            <tr>
+                                                <td>@x.ID</td>
+                                                <td>@x.Yetenek</td>
 
-                                            <td>
-                                                <div class="progress progress-xs">
-                                                    <div class="@renk" style="width: @x.Oran%"></div>
-                                                </div>
-                                            </td>
-                                            <td><span class="@renk">@x.Oran%</span></td>
-                                        </tr>
+                                                <td>
+                                                    <div class="progress progress-xs">
+                                                        <div class="@renk" style="width: @x.Oran%"></div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="@renk">@x.Oran%</span></td>
+                                                <td>
+                                                    <a href="#" class="btn btn-secondary ">Delete</a>
+                                                    <a href="#" class="btn btn-secondary mr-2">Update</a>
+                                                </td>
+
+                                            </tr>
                                         }
                                     </tbody>
                                 </table>
