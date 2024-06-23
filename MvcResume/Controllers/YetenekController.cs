@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcResume.Models.Entity;
+using MvcResume.Repositories;
 
 namespace MvcResume.Controllers
 {
     public class YetenekController : Controller
     {
         // GET: Yetenek
+       
+        GenericRepository<TblYeteneklerim> repo = new GenericRepository<TblYeteneklerim>();
         public ActionResult Index()
         {
-            return View();
+            var yetenekler = repo.List();
+            return View(yetenekler);
         }
     }
 }
