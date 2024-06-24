@@ -1,0 +1,21 @@
+﻿@model MvcResume.Models.Entity.TblYeteneklerim
+
+@{
+    ViewBag.Title = "YetenekDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Page Of Update Ability</h4>
+<br />
+<form method="post">
+    @Html.Label("Ability Description")
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+    <br />
+    @Html.Label("Degree")
+    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Update</button>
+
+</form>
+

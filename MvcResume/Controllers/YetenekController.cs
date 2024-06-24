@@ -35,5 +35,16 @@ namespace MvcResume.Controllers
             repo.Tdelete(yetenek);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult YetenekDuzenle(int id)
+        {
+            var yetenek = repo.Find(x => x.ID == id);
+            return View(yetenek);
+        }
+        [HttpPost]
+        public ActionResult YetenekDuzenle()
+        {
+            return View();
+        }
     }
 }
