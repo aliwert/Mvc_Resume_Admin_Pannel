@@ -20,6 +20,10 @@ namespace MvcResume.Models.Entity
         public string Baslik { get; set; }
         public string AltBaslik1 { get; set; }
         public string AltBaslik2 { get; set; }
+
+
+
+        [StringLength(10, ErrorMessage ="Please enter 10 character")]
         public string GNO { get; set; }
         public string Tarih { get; set; }
     }
