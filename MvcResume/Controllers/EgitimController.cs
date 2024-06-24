@@ -18,5 +18,17 @@ namespace MvcResume.Controllers
 
             return View(egitim);
         }
+        [HttpGet]
+        public ActionResult AddEducation()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddEducation(TblEgitim p)
+        {
+
+            return View();
+        }
+
     }
 }
