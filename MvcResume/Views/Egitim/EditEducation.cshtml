@@ -1,0 +1,33 @@
+﻿@model MvcResume.Models.Entity.TblEgitim
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Page Of Add Update Education</h4>
+<br />
+<form method="post">
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { style = "color:red" })
+    <br />
+    @Html.Label("Subtitle1")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AltBaslik1, "", new { style = "color:red" })
+    <br />
+    @Html.Label("Subtitle2")
+    @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AltBaslik2, "", new { style = "color:red" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Tarih, "", new { style = "color:red" })
+    <br />
+    @Html.Label("GNO")
+    @Html.TextBoxFor(x => x.GNO, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.GNO, "", new { style = "color:blue" })
+    <br />
+    <button class="btn btn-success">Save</button>
+
+</form>
+

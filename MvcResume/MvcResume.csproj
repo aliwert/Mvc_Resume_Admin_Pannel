@@ -2372,6 +2372,7 @@
     <Content Include="Views\Yetenek\YetenekDuzenle.cshtml" />
     <Content Include="Views\Egitim\Index.cshtml" />
     <Content Include="Views\Egitim\AddEducation.cshtml" />
+    <Content Include="Views\Egitim\EditEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
