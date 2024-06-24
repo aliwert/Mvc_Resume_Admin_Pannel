@@ -18,13 +18,16 @@ namespace MvcResume.Models.Entity
         public int ID { get; set; }
         [Required(ErrorMessage = "You can not skip it")]
         public string Baslik { get; set; }
+        [Required(ErrorMessage = "You can not skip it")]
         public string AltBaslik1 { get; set; }
+        [Required(ErrorMessage = "You can not skip it")]
         public string AltBaslik2 { get; set; }
 
 
 
         [StringLength(10, ErrorMessage ="Please enter 10 character")]
         public string GNO { get; set; }
+        [Required(ErrorMessage = "You can not skip it")]
         public string Tarih { get; set; }
     }
 }
