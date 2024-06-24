@@ -1,0 +1,48 @@
+﻿@using MvcResume.Models.Entity
+@model List<TblEgitim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<h2>
+    Education List
+</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Subtitle</th>
+        <th>Subtitle2</th>
+        <th>GNO</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Edit</th>
+
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Baslik</td>
+            <td>@x.AltBaslik1</td>
+            <td>@x.AltBaslik2</td>
+            <td>@x.Tarih</td>
+            <td>@x.GNO</td>
+
+            <td><a href="/Egitim/DeleteEgitimSil/@x.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Egitim/GetEgitim/@x.ID" class="btn btn-warning">Change</a></td>
+
+
+        </tr>
+    }
+</table>
+<a href="/Deneyim/AddExperience/" class="btn btn-success">Add New Education Information</a>
+
+
+
