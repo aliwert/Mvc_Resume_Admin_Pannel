@@ -34,6 +34,12 @@ namespace MvcResume.Controllers
 
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteEducation(int id)
+        {
+            var egitim = repo.Find(x=> x.ID == id);
+            repo.Tdelete(egitim);
+            return RedirectToAction("Index");
+        }
 
     }
 }
