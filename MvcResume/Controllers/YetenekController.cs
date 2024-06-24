@@ -42,9 +42,13 @@ namespace MvcResume.Controllers
             return View(yetenek);
         }
         [HttpPost]
-        public ActionResult YetenekDuzenle()
+        public ActionResult YetenekDuzenle(TblYeteneklerim t)
         {
-            return View();
+            var y = repo.Find(x => x.ID == t.ID);
+            y.Yetenek = t.Yetenek;
+            y.Oran = t.Oran;
+            repo.TUpdate(y);
+            return RedirectToAction("Index");
         }
     }
 }
