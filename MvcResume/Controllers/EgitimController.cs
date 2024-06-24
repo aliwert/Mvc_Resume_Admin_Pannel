@@ -26,8 +26,9 @@ namespace MvcResume.Controllers
         [HttpPost]
         public ActionResult AddEducation(TblEgitim p)
         {
+            repo.TAdd(p);
 
-            return View();
+            return RedirectToAction("Index");
         }
 
     }
