@@ -134,6 +134,7 @@
     <Compile Include="Controllers\EgitimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SertifikaController.cs" />
     <Compile Include="Controllers\YetenekController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2373,6 +2374,7 @@
     <Content Include="Views\Egitim\Index.cshtml" />
     <Content Include="Views\Egitim\AddEducation.cshtml" />
     <Content Include="Views\Egitim\EditEducation.cshtml" />
+    <Content Include="Views\Sertifika\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
