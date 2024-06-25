@@ -14,8 +14,7 @@
     @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
     <br />
     <button class="btn btn-success">Update</button>
-    <a href="/Sertifika/DeleteCertificate/" class="btn btn-warning">Delete</a>
-    <h1>@ViewBag.v</h1>
+    <a href="/Sertifika/DeleteCertificate/@ViewBag.v" class="btn btn-danger">Delete</a>
 
 </form>
 
