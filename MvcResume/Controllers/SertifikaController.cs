@@ -27,7 +27,11 @@ namespace MvcResume.Controllers
         [HttpPost]
         public ActionResult GetCertificate(TblSertifikalarim t)
         {
-            return View();
+            var sertifika = repo.Find(x => x.ID == t.ID);
+            sertifika.Aciklama = t.Aciklama;
+            sertifika.Date = t.Date;
+            repo.TUpdate(sertifika);
+            return RedirectToAction("Index");
         }
     }
 }
