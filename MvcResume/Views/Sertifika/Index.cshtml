@@ -21,9 +21,11 @@
                                             @foreach(var x in Model) {
                                             <div class="timeline timeline-inverse">
                                                 <div class="time-label">
-                                                    <span class="bg-success">
-                                                        @x.Date
-                                                    </span>
+                                                  <a href="/Sertifika/GetCertificate/@x.ID" class="btn btn-warning">
+                                                      <span class="bg-warning">
+                                                          @x.Date
+                                                      </span>
+                                                  </a>
                                                 </div>
                                                 <div>
                                                     <i class="fas fa-comment bg-primary"></i>

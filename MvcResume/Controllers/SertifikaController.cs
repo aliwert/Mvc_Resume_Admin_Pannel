@@ -18,5 +18,16 @@ namespace MvcResume.Controllers
             var sertifika = repo.List();
             return View(sertifika);
         }
+        [HttpGet]
+        public ActionResult GetCertificate(int id )
+        {
+            var sertifika = repo.Find(x=> x.ID == id);
+            return View(sertifika);
+        }
+        [HttpPost]
+        public ActionResult GetCertificate(TblSertifikalarim t)
+        {
+            return View();
+        }
     }
 }

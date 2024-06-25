@@ -2375,6 +2375,7 @@
     <Content Include="Views\Egitim\AddEducation.cshtml" />
     <Content Include="Views\Egitim\EditEducation.cshtml" />
     <Content Include="Views\Sertifika\Index.cshtml" />
+    <Content Include="Views\Sertifika\GetCertificate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
