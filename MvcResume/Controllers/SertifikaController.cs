@@ -33,5 +33,16 @@ namespace MvcResume.Controllers
             repo.TUpdate(sertifika);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult NewCertificate()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewCertificate(TblSertifikalarim t)
+        {
+            repo.TAdd(t);
+            return RedirectToAction("Index");
+        }
     }
 }
