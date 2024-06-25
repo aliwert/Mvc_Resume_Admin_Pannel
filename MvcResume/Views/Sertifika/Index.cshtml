@@ -1,4 +1,5 @@
-﻿
+﻿@using MvcResume.Models.Entity
+@model List<TblSertifikalarim>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -17,10 +18,11 @@
                                 <div class="card-body">
                                     
                                         <div class="tab-pane" id="timeline">
+                                            @foreach(var x in Model) {
                                             <div class="timeline timeline-inverse">
                                                 <div class="time-label">
                                                     <span class="bg-success">
-                                                        10 Feb. 2014
+                                                        @x.Date
                                                     </span>
                                                 </div>
                                                 <div>
@@ -28,7 +30,7 @@
 
                                                     <div class="timeline-item">
                                                         <div class="timeline-body">
-                                                           desc.
+                                                           @x.Aciklama
                                                         </div>
                                                         <div class="timeline-footer">
                                                             <a href="#" class="btn btn-primary btn-sm">Edit</a>
@@ -37,6 +39,7 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>
