@@ -1,8 +1,22 @@
-﻿
+﻿@model MvcResume.Models.Entity.TblSertifikalarim
 @{
     ViewBag.Title = "NewCertificate";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<br />
+<h4>Page Of Add New Certificate</h4>
+<br />
+<form method="post">
+    @Html.Label("Certificate Description")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Save</button>
 
-<h2>NewCertificate</h2>
+</form>
+
+
+
 
