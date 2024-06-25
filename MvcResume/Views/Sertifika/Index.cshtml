@@ -8,45 +8,57 @@
 <!DOCTYPE html>
 <html>
 <body class="hold-transition sidebar-mini">
-            <section class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header p-2">
-                                </div>
-                                <div class="card-body">
-                                    
-                                        <div class="tab-pane" id="timeline">
-                                            @foreach(var x in Model) {
-                                            <div class="timeline timeline-inverse">
-                                                <div class="time-label">
-                                                  <a href="/Sertifika/GetCertificate/@x.ID" class="btn btn-warning">
-                                                      <span class="bg-warning">
-                                                          @x.Date
-                                                      </span>
-                                                  </a>
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-comment bg-primary"></i>
-
-                                                    <div class="timeline-item">
-                                                        <div class="timeline-body">
-                                                           @x.Aciklama
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-pane" id="timeline">
+                                @foreach (var x in Model)
+                                {
+                                    <div class="timeline timeline-inverse">
+                                        <div class="time-label">
+                                            @{
+                                                int lastDigit = int.Parse(x.Date.Trim().Substring(x.Date.Trim().Length - 1));
+                                                bool isEven = lastDigit % 2 == 0;
+                                            }
+                                            @if (isEven)
+                                            {
+                                                <a href="/Sertifika/GetCertificate/@x.ID" class="btn btn-warning">
+                                                    <span class="bg-warning">
+                                                        @x.Date
+                                                    </span>
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a href="/Sertifika/GetCertificate/@x.ID" class="btn btn-success">
+                                                    <span class="bg-success">
+                                                        @x.Date
+                                                    </span>
+                                                </a>
                                             }
                                         </div>
+                                        <div>
+                                            <i class="fas fa-comment bg-primary"></i>
+
+                                            <div class="timeline-item">
+                                                <div class="timeline-body">
+                                                    @x.Aciklama
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
-              
-            </section>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
-
-
