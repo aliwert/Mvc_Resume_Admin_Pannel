@@ -44,5 +44,12 @@ namespace MvcResume.Controllers
             repo.TAdd(t);
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteCertificate(int id)
+        {
+            var sertifika = repo.Find(x => x.ID == id);
+            ViewBag.v = sertifika.ID; // carry id
+            repo.Tdelete(sertifika);
+            return RedirectToAction("Index");
+        }
     }
 }
