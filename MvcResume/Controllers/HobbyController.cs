@@ -11,10 +11,20 @@ namespace MvcResume.Controllers
     {
         // GET: Hobby
         GenericRepository<TblHobilerim> repo = new GenericRepository<TblHobilerim>();
+        [HttpGet]
         public ActionResult Index()
         {
             var hobbies = repo.List();
             return View(hobbies);
+        }
+        [HttpPost]
+        public ActionResult Index(TblHobilerim p)
+        {
+            var h = repo.Find(x => x.ID == 1);
+            h.Aciklama1 = p.Aciklama1;
+            h.Aciklama2 = p.Aciklama2;
+            repo.TUpdate(h);
+            return RedirectToAction("Index");
         }
     }
 }
