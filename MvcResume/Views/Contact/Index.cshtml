@@ -1,4 +1,5 @@
-﻿
+﻿@using MvcResume.Models.Entity
+@model List<TblIletisim>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -14,10 +15,11 @@
                         <div class="card-body">
                             <div class="tab-pane" id="timeline">
                                 <div class="timeline timeline-inverse">
-                                   
+                                    @foreach (var x in Model)
+                                    {
                                         <div class="time-label">
                                             <span class="bg-info">
-                                               
+
                                             </span>
                                         </div>
                                         <div>
@@ -26,11 +28,11 @@
                                                 <span class="time"><i class="far fa-clock"></i></span>
                                                 <h3 class="timeline-header"><a href="#"></a> </h3>
                                                 <div class="timeline-body">
-                                                  
+
                                                 </div>
                                             </div>
                                         </div>
-                                  
+                                    }
                                 </div>
                             </div>
                         </div>
