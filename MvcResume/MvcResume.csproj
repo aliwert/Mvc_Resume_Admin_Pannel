@@ -134,6 +134,7 @@
     <Compile Include="Controllers\DeneyimController.cs" />
     <Compile Include="Controllers\EgitimController.cs" />
     <Compile Include="Controllers\HakkimdaController.cs" />
+    <Compile Include="Controllers\HobbyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SertifikaController.cs" />
     <Compile Include="Controllers\YetenekController.cs" />
@@ -2379,6 +2380,7 @@
     <Content Include="Views\Sertifika\GetCertificate.cshtml" />
     <Content Include="Views\Sertifika\NewCertificate.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Hobby\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
