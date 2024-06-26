@@ -1,8 +1,19 @@
-﻿
+﻿@using MvcResume.Models.Entity
+@model List<TblHobilerim>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<br />
+<h2>Page of Edit Hobby</h2>
+<br />
+@foreach (var x in Model)
+{
+    <label>Description 1:</label>
+<textarea rows="8" class="form-control">@x.Aciklama1</textarea>
+    <label>Description 2:</label>
+<textarea rows="8" class="form-control">@x.Aciklama2</textarea>
+<br />
+<button class="btn btn-info">Update</button>
 
-<h2>Index</h2>
-
+}
