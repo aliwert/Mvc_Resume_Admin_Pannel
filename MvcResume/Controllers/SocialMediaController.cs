@@ -20,12 +20,28 @@ namespace MvcResume.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            return View();  
+            return View();
         }
         [HttpPost]
         public ActionResult Add(TblSosyalMedya p)
         {
             repo.TAdd(p);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var hesap = repo.Find(x => x.ID == id);
+            return View(hesap);
+        }
+        [HttpPost]
+        public ActionResult Edit(TblSosyalMedya p)
+        {
+            var hesap = repo.Find(x=> x.ID == p.ID);
+            hesap.Name = p.Name;
+            hesap.Link = p.Link;
+            hesap.Icon = p.Icon;
+            repo.TUpdate(hesap);
             return RedirectToAction("Index");
         }
     }
