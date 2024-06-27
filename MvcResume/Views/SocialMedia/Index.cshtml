@@ -30,14 +30,11 @@
                                             <th>Social Media</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
-
-
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var x in Model)
                                         {
-
                                             <tr>
                                                 <td>@x.ID</td>
                                                 <td>@x.Name</td>
@@ -47,7 +44,6 @@
                                                 <td>
                                                     <a class="btn btn-danger btn-sm" href="/Yetenek/YetenekSil/@x.ID"><i class="fas fa-trash">Delete</i></a>
                                                 </td>
-
                                             </tr>
                                         }
                                     </tbody>
