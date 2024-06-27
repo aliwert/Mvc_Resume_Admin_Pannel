@@ -18,5 +18,6 @@ namespace MvcResume.Models.Entity
         public string Name { get; set; }
         public string Link { get; set; }
         public string Icon { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

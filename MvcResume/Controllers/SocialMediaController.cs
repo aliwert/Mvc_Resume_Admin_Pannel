@@ -39,8 +39,16 @@ namespace MvcResume.Controllers
         {
             var hesap = repo.Find(x=> x.ID == p.ID);
             hesap.Name = p.Name;
+            hesap.Status = true;
             hesap.Link = p.Link;
             hesap.Icon = p.Icon;
+            repo.TUpdate(hesap);
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(int id)
+        {
+            var hesap = repo.Find(x=> x.ID == id);
+            hesap.Status = false;
             repo.TUpdate(hesap);
             return RedirectToAction("Index");
         }

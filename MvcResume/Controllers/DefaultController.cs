@@ -18,7 +18,7 @@ namespace MvcResume.Controllers
         }
         public PartialViewResult SocialMedia()
         {
-            var social = db.TblSosyalMedyas.ToList();
+            var social = db.TblSosyalMedyas.Where(x => x.Status == true).ToList();
             return PartialView(social);
         }
         public PartialViewResult Deneyim()
@@ -55,7 +55,7 @@ namespace MvcResume.Controllers
         [HttpPost]
         public PartialViewResult iletisim(TblIletisim t)
         {
-            t.Tarih= DateTime.Parse(DateTime.Now.ToShortDateString());
+            t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
             db.TblIletisims.Add(t);
             db.SaveChanges();
             return PartialView();

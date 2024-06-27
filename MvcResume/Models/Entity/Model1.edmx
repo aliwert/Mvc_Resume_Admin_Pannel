@@ -82,6 +82,7 @@
           <Property Name="Name" Type="varchar" MaxLength="30" />
           <Property Name="Link" Type="varchar" MaxLength="50" />
           <Property Name="Icon" Type="varchar" MaxLength="30" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="TblYeteneklerim">
           <Key>
@@ -202,6 +203,7 @@
           <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Icon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -297,6 +299,7 @@
           <EntitySetMapping Name="TblSosyalMedyas">
             <EntityTypeMapping TypeName="DbCvModel.TblSosyalMedya">
               <MappingFragment StoreEntitySet="TblSosyalMedya">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Icon" ColumnName="Icon" />
                 <ScalarProperty Name="Link" ColumnName="Link" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
