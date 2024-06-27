@@ -17,5 +17,16 @@ namespace MvcResume.Controllers
             var veriler = repo.List();
             return View(veriler);
         }
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();  
+        }
+        [HttpPost]
+        public ActionResult Add(TblSosyalMedya p)
+        {
+            repo.TAdd(p);
+            return RedirectToAction("Index");
+        }
     }
 }
