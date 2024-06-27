@@ -7,5 +7,68 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+@{
+    string renk = "";
+}
+
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Abilities List</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <a href="/Yetenek/YeniYetenek/" class="btn btn-info">Add New Ability</a>
+                                <br />
+                                <br />
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Social Media</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model)
+                                        { 
+
+                                            <tr>
+                                                <td>@x.ID</td>
+                                                <td>@x.Name</td>
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="/SocialMedia/Duzenle/@x.ID"><i class="fas fa-pencil-alt">Edit</i></a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/Yetenek/YetenekSil/@x.ID"><i class="fas fa-trash">Delete</i></a>
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
 
