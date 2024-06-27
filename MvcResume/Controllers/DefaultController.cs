@@ -16,6 +16,11 @@ namespace MvcResume.Controllers
             var degerler = db.TblAbouts.ToList();
             return View(degerler);
         }
+        public PartialViewResult SocialMedia()
+        {
+            var social = db.TblSosyalMedyas.ToList();
+            return PartialView(social);
+        }
         public PartialViewResult Deneyim()
         {
             var deneyimler = db.TblDeneyimlerims.ToList();

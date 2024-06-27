@@ -2384,6 +2384,7 @@
     <Content Include="Views\Sertifika\NewCertificate.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Hobby\Index.cshtml" />
+    <Content Include="Views\Default\SocialMedia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
