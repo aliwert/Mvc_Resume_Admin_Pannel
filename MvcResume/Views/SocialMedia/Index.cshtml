@@ -20,7 +20,7 @@
                                 <h3 class="card-title">Abilities List</h3>
                             </div>
                             <div class="card-body">
-                                <a href="/Yetenek/YeniYetenek/" class="btn btn-info">Add New Social Media</a>
+                                <button class="btn btn-info" data-toggle="modal" data-target="#Modal1">Add New Social Media</button>
                                 <br />
                                 <br />
                                 <table class="table table-bordered">
@@ -54,11 +54,26 @@
                 </div>
             </div>
         </section>
-
-
-        <div class="modal" id="modal1">
+        <div class="modal" id="Modal1">
             <div class="modal-dialog">
-                <div ></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Window of Social Media</h2>
+                    </div>
+                    <form method="post" action="/SocialMedia/Add">
+                        <div class="modal-body">
+                            <label>Name of Social Media</label>
+                            <input type="text" name="Ad" class="form-control" />
+                            <br />
+                            <label>Link of Social Media</label>
+                            <input type="text" name="Link" class="form-control" />
+                            <br />
+                            <label>Icon of Social Media</label>
+                            <input type="text" name="İkon" class="form-control" />
+                            <br />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
