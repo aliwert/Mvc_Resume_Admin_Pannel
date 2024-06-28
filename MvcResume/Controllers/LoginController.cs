@@ -25,7 +25,7 @@ namespace MvcResume.Controllers
             {
                 FormsAuthentication.SetAuthCookie(bilgi.KullaniciAdi, false);
                 Session["KullaniciAdi"] = bilgi.KullaniciAdi.ToString();
-                return RedirectToAction("Index", "Education");
+                return RedirectToAction("Index", "Yetenek");
             }
             else
             {
