@@ -8,7 +8,6 @@ using MvcResume.Repositories;
 
 namespace MvcResume.Controllers
 {
-    [AllowAnonymous]
     public class AdminController : Controller
     {
         // GET: Admin
