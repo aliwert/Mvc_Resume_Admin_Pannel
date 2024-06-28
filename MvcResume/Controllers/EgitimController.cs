@@ -8,11 +8,10 @@ using System.Web.Mvc;
 
 namespace MvcResume.Controllers
 {
+    [Authorize]
     public class EgitimController : Controller
     {
-        // GET: Egitim
         GenericRepository<TblEgitim> repo = new GenericRepository<TblEgitim>();
-        [Authorize]
         public ActionResult Index()
         {
             var egitim = repo.List();

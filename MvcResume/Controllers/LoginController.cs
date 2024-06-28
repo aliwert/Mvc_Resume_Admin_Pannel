@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace MvcResume.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login

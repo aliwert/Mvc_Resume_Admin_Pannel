@@ -7,6 +7,7 @@ using MvcResume.Models.Entity;
 
 namespace MvcResume.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
