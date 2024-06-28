@@ -12,6 +12,7 @@ namespace MvcResume.Controllers
     {
         // GET: Egitim
         GenericRepository<TblEgitim> repo = new GenericRepository<TblEgitim>();
+        [Authorize]
         public ActionResult Index()
         {
             var egitim = repo.List();
