@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -32,6 +33,13 @@ namespace MvcResume.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+           
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // leave
+            return RedirectToAction("Index", "Login");
         }
     }
 }
