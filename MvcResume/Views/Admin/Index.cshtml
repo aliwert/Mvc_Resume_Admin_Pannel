@@ -1,0 +1,30 @@
+﻿@using MvcResume.Models.Entity
+@model List<TblAdmin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>
+    Admin Panel
+</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Nickname</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.KullaniciAdi</td>
+            <td><a href="/Admin/AdminDuzenle/@x.ID" class="btn btn-warning">Edit</a></td>
+            <td><a href="/Admin/AdminSil/@x.ID" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/AdminEkle/" class="btn btn-success">Add New User</a>
+
+
+
